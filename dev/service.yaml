@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: todo_app-service
+  name: todoapp-service
 spec:
   selector:
-    app: todo_app
+    app: todoapp
   ports:
   - port: 8001
     protocol: TCP
