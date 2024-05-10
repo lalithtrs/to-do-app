@@ -1,0 +1,33 @@
+body {
+  background-color: rgb(93, 102, 234);
+}
+
+.container {
+  background-color: whitesmoke;
+  margin-top: 100px;
+  padding: 50px;
+  box-shadow: 6px 6px 30px -10px rgba(0, 0, 0, 0.72);
+  border-radius: 15px;
+}
+
+.btn {
+  height: 30.5px;
+  line-height: 1px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+#delete-icon:hover {
+  transform: scale(1.2);
+}
+
+#title:hover {
+  text-decoration: none;
+}
+
+#title-cross {
+  text-decoration: line-through;
+}
