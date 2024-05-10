@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: todoapp
-        image: lalithtrs/todo_app:1.1
+        image: lalithtrs/todo_app:1.0
         ports:
         - containerPort: 8000
