@@ -1,8 +1,8 @@
 
 # To-Do app with Kubernetes and ArgoCD
 
-In this repository, we will dockerize a simple web application, deploy it to a Kubernetes cluster using Argo
- CD, and manageits release process with Argo Rollouts. 
+In this repository, we will dockerize a simple web application, deploying it in a Kubernetes cluster and monitor their updates using Argo
+ CD and manage its release process with Argo Rollouts. 
 
 ## Documentation
 ## Step 1:
@@ -152,8 +152,8 @@ You will see a login page, the username is 'admin' and for password
 Go to terminal 
 ```
 argocd admin initial-password -n argocd
-# this auto-generate a hash , use base64 converter to decode it and enter into the login page , you will get access to the ArgoCD-Server
 ```
+This auto-generate a hash , use base64 converter to decode it and enter into the login page , you will get access to the ArgoCD-Server. https://127.0.0.1:8000
 ## ArgoCD Rollouts
 
 Install ArgoCD Rollouts with this command
@@ -291,11 +291,11 @@ After the ArgoCD-server synchronized, the Server will be like this. Like, we men
 
 When you make a change in the Manifest files like updating the docker image version in the deployment file. The ArgoCD will look up for the changes in every 3 minutes. 
 
-When it finds a out of sync change in the actual state (Git Repository) this will also change in the Cluster (Desired state)
+When it finds a out of sync change in the actual state (Git Repository) then it changes in the Kubernetes Cluster (Desired state)
 
 ![alt text](<Screenshots/after docker change.png>)
 
-So here, I have configured the docker version from 1.1 to 1.0 , So this was detected by the ArgoCD and the change was done. The Pods which are running in the docker version 1.1 is modified into verison 1.0
+So here, I have configured the docker version from 1.1 to 1.0 in the deployment.yaml , So this was detected by the ArgoCD and the change was done. The Pods which are running in the docker version 1.1 are modified into verison 1.0
 
 To see the rollout use the following command
 ```
